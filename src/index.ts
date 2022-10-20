@@ -1,7 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import diagnoseRouter from "./routes/diagnose.route";
+import diagnoseRouter from "./routes/diagnoses.route";
+import patientRouter from "./routes/patients.route";
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ app.get("/api/ping", (_req, res) => {
 });
 
 app.use("/api/diagnoses", diagnoseRouter);
+app.use("/api/patients", patientRouter);
 
 const PORT = process.env.PORT || 3000;
 
