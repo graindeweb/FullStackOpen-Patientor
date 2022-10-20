@@ -1,2 +1,5 @@
 ### GET Ping
 GET http://localhost:3001/api/ping
+
+### GET Diagnoses
+GET http://localhost:3001/api/diagnoses

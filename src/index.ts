@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import diagnoseRouter from "./routes/diagnose.route";
 
 dotenv.config();
 
@@ -10,6 +11,8 @@ app.use(cors());
 app.get("/api/ping", (_req, res) => {
   res.send("pong");
 });
+
+app.use("/api/diagnoses", diagnoseRouter);
 
 const PORT = process.env.PORT || 3000;
 
